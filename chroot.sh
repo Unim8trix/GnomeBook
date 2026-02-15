@@ -157,16 +157,7 @@ install() {
     echo -e "${YELLOW}Install Gnome and tools${NORMAL}\n"
     sleep 2
     su ${USERNAME} -c "yay --noconfirm -Sy gnome firefox-developer-edition-i18n-de \
-      plymouth-theme-arch-charge"
-    echo -e "${GREEN}Done${NORMAL}\n"
-    sleep 5
-
-    echo -e "${YELLOW}Install Gnome extensions${NORMAL}\n"
-    sleep 2
-    su ${USERNAME} -c "yay --noconfirm -Sy gnome-shell-extension-dash-to-dock \
-      gnome-shell-extension-tray-icons-reloaded gnome-shell-extension-arch-update \
-      gnome-shell-extension-rounded-window-corners-reborn gnome-shell-extension-space-bar-git \
-      gnome-shell-extension-vitals"
+      plymouth-theme-arch-charge gnome-shell-extension-manager"
     echo -e "${GREEN}Done${NORMAL}\n"
     sleep 5
 
