@@ -157,17 +157,12 @@ install() {
     echo -e "${YELLOW}Install Gnome and tools${NORMAL}\n"
     sleep 2
     su ${USERNAME} -c "yay --noconfirm -Sy gnome firefox-developer-edition-i18n-de \
-      plymouth-theme-arch-charge gnome-shell-extension-manager"
+      plymouth-theme-arch-charge gnome-shell-extension-manager power-profiles-daemon gnome-tweaks"
     echo -e "${GREEN}Done${NORMAL}\n"
     sleep 5
 
     echo -e "${YELLOW}Enable Gnome display manager${NORMAL}\n"
     systemctl enable gdm
-    echo -e "${GREEN}Done${NORMAL}\n"
-    sleep 1
-
-    echo -e "${YELLOW}Adjust Gnome settings${NORMAL}\n"
-    su ${USERNAME} -c "gsettings set org.gnome.SessionManager logout-prompt false"
     echo -e "${GREEN}Done${NORMAL}\n"
     sleep 1
 
